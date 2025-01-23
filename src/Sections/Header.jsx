@@ -58,28 +58,28 @@ const Header = () => {
                   </LinkScroll>
                 </li>
                 <li className="nav-li">
-                  <NavLink title="faqs" />
+                  <NavLink title="faq" />
                   <div className="dot" />
                   <NavLink title="download" />
                 </li>
               </ul>
             </nav>
-            <div classname="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[360px] translate-x-[-290px] -translate-y-1/2 rotate-90">
-              <img
+            {/* <div classname="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90"> */}
+              {/* <img
                 src="/images/bg-outlines.svg"
                 width={960}
-                height={360}
+                height={380}
                 className="relative z-2"
                 alt=""
               />
               <img
                 src="/images/bg-outlines-fill.png"
                 width={960}
-                height={360}
+                height={380}
                 className="absolute inset-0 mix-blend-soft-light opacity-5"
                 alt=""
-              />
-            </div>
+              /> */}
+            {/* </div> */}
           </div>
         </div>
 
