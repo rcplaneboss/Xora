@@ -1,3 +1,4 @@
+import Features from "./Sections/Features.jsx";
 import Header from "./Sections/Header.jsx";
 import Hero from "./Sections/Hero.jsx";
 
@@ -6,6 +7,7 @@ const App = () => {
     <main className="overflow-hidden">
       <Header />
       <Hero />
+      <Features />
     </main>
   );
 };
