@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import { useState } from "react";
 import { plans } from "../../constants";
 import CountUp from "react-countup";
+import Button from "../Components/Button";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -89,8 +90,7 @@ const Pricing = () => {
                     "relative flex flex-col items-center ",
                     ind === 1 ? "pt-24" : "pt-12"
                   )}
-                    >
-                        
+                >
                   <div
                     className={clsx(
                       "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
@@ -98,11 +98,61 @@ const Pricing = () => {
                     )}
                   >
                     {plan.title}
-                        </div>
-                        <div className="relative z-2 flex items-center justify-center">
-                            <div className={clsx('h-num flex items-start', ind === 1 ? 'text-p3' : 'text-p4')}>$ <CountUp start={plan.priceMonthly} end={ monthly ? plan.priceMonthly : plan.priceYearly} duration={0.4} useEasing={false} preserveValue />  </div>
-                        </div>
+                  </div>
+                  <div className="relative z-2 flex items-center justify-center">
+                    <div
+                      className={clsx(
+                        "h-num flex items-start",
+                        ind === 1 ? "text-p3" : "text-p4"
+                      )}
+                    >
+                      ${" "}
+                      <CountUp
+                        start={plan.priceMonthly}
+                        end={monthly ? plan.priceMonthly : plan.priceYearly}
+                        duration={0.4}
+                        useEasing={false}
+                        preserveValue
+                      />
+                    </div>
+                    <div className="small-1 relative top-3 ml-1 uppercase">
+                      <span className=""> /mo</span>
+                    </div>
+                  </div>
                 </div>
+                <div
+                  className={clsx(
+                    "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
+                    ind == 1 && "border-b"
+                  )}
+                >
+                  {plan.caption}
+                </div>
+                <ul className="mx-auto space-y-4 xl:px-7">
+                  {plan.features.map((feature, index) => (
+                    <li
+                      key={index}
+                      className="relative flex items-center gap-5"
+                    >
+                      <img
+                        src={`/images/check.png`}
+                        alt="check"
+                        className="size-10 object-contain"
+                      />
+                      <p className="flex-1 ">{feature} </p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-10 flex w-full justify-center">
+                  <Button icon={plan.icon}>Get Started</Button>
+                </div>
+                
+                {ind === 1 && (
+                  <p className="small-compact mt-9 text-p3 text-center before:content-['-'] before:mx-2.5 after:mx-2.5 after:content-['-']">
+                    Limited time offer
+                  </p>
+                )
+                }
               </div>
             ))}
           </div>

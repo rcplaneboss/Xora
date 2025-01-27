@@ -1,3 +1,4 @@
+import Faqs from "./Sections/Faq.jsx";
 import Features from "./Sections/Features.jsx";
 import Header from "./Sections/Header.jsx";
 import Hero from "./Sections/Hero.jsx";
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <Features />
       <Pricing />
+      <Faqs />
     </main>
   );
 };
