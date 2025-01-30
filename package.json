@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://rcplaneboss.github.io/Xora",
+  "homepage": "https://rcplaneboss.github.io/Xora/",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "clsx": "^2.1.1",
